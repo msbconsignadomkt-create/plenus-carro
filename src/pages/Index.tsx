@@ -173,7 +173,7 @@ Valor estimado: R$ ${value}.`;
                   <div className="p-6 border-r font-medium">Valor Total Pago</div>
                   <div className="p-6 border-r text-center">
                     <CheckCircle className="h-6 w-6 text-green-600 mx-auto mb-1" />
-                    <span className="text-green-600 font-semibold">Preço da tabela</span>
+                    <span className="text-green-600 font-semibold">Preço negociado</span>
                   </div>
                   <div className="p-6 text-center text-destructive font-semibold">Até 80% mais caro</div>
                 </div>
