@@ -443,12 +443,12 @@ Valor estimado: R$ ${value}.`;
       <footer className="py-12 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4">
           <div className="text-center">
-            <img src="/lovable-uploads/c5604e87-e4d6-41ab-b1a7-9b2e28dd53e2.png" alt="Plenus Seguros" className="h-12 w-auto mx-auto mb-6" />
+            <img src="/lovable-uploads/c5604e87-e4d6-41ab-b1a7-9b2e28dd53e2.png" alt="Plenus Seguros" className="h-12 w-auto mx-auto mb-6 filter brightness-0 invert" />
             <p className="mb-4">
               Sua parceria de confiança para realizar o sonho do carro próprio
             </p>
             <div className="flex justify-center gap-6 text-sm">
-              <span>© 2024 Plenus Seguros</span>
+              <span>© 2025 Plenus Seguros</span>
               <span>CNPJ: XX.XXX.XXX/XXXX-XX</span>
             </div>
           </div>
