@@ -6,13 +6,11 @@ import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Car, CreditCard, Shield, Users, Calculator, CheckCircle, Star, Phone, Mail, ChevronRight } from "lucide-react";
 import heroCarImage from "@/assets/hero-car.jpg";
-
 const Index = () => {
   const handleWhatsAppContact = (message: string) => {
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/5511999999999?text=${encodedMessage}`, '_blank');
   };
-
   const handleSimulationSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.target as HTMLFormElement);
@@ -20,25 +18,17 @@ const Index = () => {
     const phone = formData.get('phone');
     const vehicle = formData.get('vehicle');
     const value = formData.get('value');
-    
     const message = `Olá! Gostaria de simular um consórcio para ${vehicle}. 
 Meus dados: ${name}, ${phone}. 
 Valor estimado: R$ ${value}.`;
-    
     handleWhatsAppContact(message);
   };
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="fixed top-0 w-full bg-background/95 backdrop-blur-sm z-50 border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <img 
-              src="/lovable-uploads/c5604e87-e4d6-41ab-b1a7-9b2e28dd53e2.png" 
-              alt="Plenus Seguros" 
-              className="h-10 w-auto"
-            />
+            <img src="/lovable-uploads/c5604e87-e4d6-41ab-b1a7-9b2e28dd53e2.png" alt="Plenus Seguros" className="h-10 w-auto" />
           </div>
           <Button variant="secondary" size="sm" onClick={() => handleWhatsAppContact("Olá! Gostaria de conhecer mais sobre os consórcios da Plenus.")}>
             <Phone className="h-4 w-4 mr-2" />
@@ -63,32 +53,20 @@ Valor estimado: R$ ${value}.`;
                 Consórcio sem juros, sem entrada obrigatória e com parcelas que cabem no seu bolso. Simule agora!
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  variant="secondary" 
-                  size="lg"
-                  onClick={() => document.getElementById('simulacao')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="text-lg px-8 py-6"
-                >
+                <Button variant="secondary" size="lg" onClick={() => document.getElementById('simulacao')?.scrollIntoView({
+                behavior: 'smooth'
+              })} className="text-lg px-8 py-6">
                   Simule Agora
                   <Calculator className="ml-2 h-5 w-5" />
                 </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  onClick={() => handleWhatsAppContact("Olá! Gostaria de falar com um especialista sobre consórcios.")}
-                  className="text-lg px-8 py-6 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground hover:text-primary"
-                >
+                <Button variant="outline" size="lg" onClick={() => handleWhatsAppContact("Olá! Gostaria de falar com um especialista sobre consórcios.")} className="text-lg px-8 py-6 border-primary-foreground/20 hover:bg-primary-foreground text-slate-950">
                   Falar com Especialista
                   <ChevronRight className="ml-2 h-5 w-5" />
                 </Button>
               </div>
             </div>
             <div className="lg:order-2">
-              <img 
-                src={heroCarImage} 
-                alt="Carro novo - Consórcio Plenus" 
-                className="w-full h-auto rounded-2xl shadow-elegant"
-              />
+              <img src={heroCarImage} alt="Carro novo - Consórcio Plenus" className="w-full h-auto rounded-2xl shadow-elegant" />
             </div>
           </div>
         </div>
@@ -318,22 +296,14 @@ Valor estimado: R$ ${value}.`;
             </div>
 
             <div className="text-center">
-              <img 
-                src="/lovable-uploads/38b25d33-557d-4466-871e-577411d2ce35.png" 
-                alt="Hugo - Especialista Plenus Seguros" 
-                className="w-80 h-auto mx-auto rounded-2xl shadow-elegant"
-              />
+              <img src="/lovable-uploads/38b25d33-557d-4466-871e-577411d2ce35.png" alt="Hugo - Especialista Plenus Seguros" className="w-80 h-auto mx-auto rounded-2xl shadow-elegant" />
               <Card className="mt-6 shadow-card">
                 <CardContent className="p-6">
                   <h3 className="font-semibold text-primary mb-2">Hugo - CEO Plenus Seguros</h3>
                   <p className="text-muted-foreground mb-4">
                     Mais de 10 anos ajudando pessoas a realizarem o sonho do carro próprio através do consórcio.
                   </p>
-                  <Button 
-                    variant="outline" 
-                    onClick={() => handleWhatsAppContact("Olá Hugo! Gostaria de conversar sobre consórcios.")}
-                    className="w-full"
-                  >
+                  <Button variant="outline" onClick={() => handleWhatsAppContact("Olá Hugo! Gostaria de conversar sobre consórcios.")} className="w-full">
                     <Phone className="h-4 w-4 mr-2" />
                     Falar com Hugo
                   </Button>
@@ -424,33 +394,17 @@ Valor estimado: R$ ${value}.`;
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="name">Nome completo</Label>
-                      <Input 
-                        id="name" 
-                        name="name" 
-                        placeholder="Seu nome completo"
-                        required
-                      />
+                      <Input id="name" name="name" placeholder="Seu nome completo" required />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="phone">WhatsApp</Label>
-                      <Input 
-                        id="phone" 
-                        name="phone" 
-                        type="tel"
-                        placeholder="(11) 99999-9999"
-                        required
-                      />
+                      <Input id="phone" name="phone" type="tel" placeholder="(11) 99999-9999" required />
                     </div>
                   </div>
                   
                   <div className="space-y-2">
                     <Label htmlFor="vehicle">Tipo de veículo</Label>
-                    <select 
-                      id="vehicle" 
-                      name="vehicle"
-                      className="w-full p-3 border border-input rounded-lg bg-background"
-                      required
-                    >
+                    <select id="vehicle" name="vehicle" className="w-full p-3 border border-input rounded-lg bg-background" required>
                       <option value="">Selecione o tipo de veículo</option>
                       <option value="Carro Popular">Carro Popular (até R$ 50.000)</option>
                       <option value="Carro Médio">Carro Médio (R$ 50.000 - R$ 100.000)</option>
@@ -462,12 +416,7 @@ Valor estimado: R$ ${value}.`;
                   
                   <div className="space-y-2">
                     <Label htmlFor="value">Valor estimado do veículo</Label>
-                    <Input 
-                      id="value" 
-                      name="value" 
-                      placeholder="Ex: 80.000"
-                      required
-                    />
+                    <Input id="value" name="value" placeholder="Ex: 80.000" required />
                   </div>
                   
                   <Button type="submit" className="w-full" size="lg" variant="secondary">
@@ -485,11 +434,7 @@ Valor estimado: R$ ${value}.`;
       <footer className="py-12 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4">
           <div className="text-center">
-            <img 
-              src="/lovable-uploads/c5604e87-e4d6-41ab-b1a7-9b2e28dd53e2.png" 
-              alt="Plenus Seguros" 
-              className="h-12 w-auto mx-auto mb-6 filter brightness-0 invert"
-            />
+            <img src="/lovable-uploads/c5604e87-e4d6-41ab-b1a7-9b2e28dd53e2.png" alt="Plenus Seguros" className="h-12 w-auto mx-auto mb-6 filter brightness-0 invert" />
             <p className="mb-4">
               Sua parceria de confiança para realizar o sonho do carro próprio
             </p>
@@ -500,8 +445,6 @@ Valor estimado: R$ ${value}.`;
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
