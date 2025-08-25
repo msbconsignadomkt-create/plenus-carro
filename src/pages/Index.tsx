@@ -170,7 +170,7 @@ Valor estimado: R$ ${value}.`;
                   </div>
                   <div className="p-6 border-b text-center text-destructive font-semibold">Obrigatória (20-30%)</div>
 
-                  <div className="p-6 border-r font-medium">Valor Total</div>
+                  <div className="p-6 border-r font-medium">Valor Total Pago</div>
                   <div className="p-6 border-r text-center">
                     <CheckCircle className="h-6 w-6 text-green-600 mx-auto mb-1" />
                     <span className="text-green-600 font-semibold">Preço da tabela</span>
