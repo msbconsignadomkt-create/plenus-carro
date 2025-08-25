@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Car, CreditCard, Shield, Users, Calculator, CheckCircle, Star, Phone, Mail, ChevronRight } from "lucide-react";
+import { Car, CreditCard, Shield, Users, Calculator, CheckCircle, Star, Phone, Mail, ChevronRight, X } from "lucide-react";
 import heroCarImage from "@/assets/hero-car.jpg";
 const Index = () => {
   const handleWhatsAppContact = (message: string) => {
@@ -161,21 +161,30 @@ Valor estimado: R$ ${value}.`;
                     <CheckCircle className="h-6 w-6 text-green-600 mx-auto mb-1" />
                     <span className="text-green-600 font-semibold">Zero Juros</span>
                   </div>
-                  <div className="p-6 border-b text-center text-destructive font-semibold">Até 3% a.m.</div>
+                  <div className="p-6 border-b text-center">
+                    <X className="h-6 w-6 text-destructive mx-auto mb-1" />
+                    <span className="text-destructive font-semibold">Até 3% a.m.</span>
+                  </div>
 
                   <div className="p-6 border-b border-r font-medium">Entrada</div>
                   <div className="p-6 border-b border-r text-center">
                     <CheckCircle className="h-6 w-6 text-green-600 mx-auto mb-1" />
                     <span className="text-green-600 font-semibold">Não obrigatória</span>
                   </div>
-                  <div className="p-6 border-b text-center text-destructive font-semibold">Obrigatória (20-30%)</div>
+                  <div className="p-6 border-b text-center">
+                    <X className="h-6 w-6 text-destructive mx-auto mb-1" />
+                    <span className="text-destructive font-semibold">Obrigatória (20-30%)</span>
+                  </div>
 
                   <div className="p-6 border-r font-medium">Valor Total Pago</div>
                   <div className="p-6 border-r text-center">
                     <CheckCircle className="h-6 w-6 text-green-600 mx-auto mb-1" />
                     <span className="text-green-600 font-semibold">Preço negociado</span>
                   </div>
-                  <div className="p-6 text-center text-destructive font-semibold">Até 80% mais caro</div>
+                  <div className="p-6 text-center">
+                    <X className="h-6 w-6 text-destructive mx-auto mb-1" />
+                    <span className="text-destructive font-semibold">Até 80% mais caro</span>
+                  </div>
                 </div>
               </CardContent>
             </Card>
