@@ -8,7 +8,7 @@ import { Car, CreditCard, Shield, Users, Calculator, CheckCircle, Star, Phone, M
 import heroCarImage from "@/assets/hero-car.jpg";
 const Index = () => {
   const handleWhatsAppContact = () => {
-    window.open('https://wa.me/5531996925313?text=Oi!%20%C3%89%20um%20prazer%20ter%20voc%C3%AA%20na%20Plenus.%0A%0AQue%20tal%20come%C3%A7armos%20nossa%20conversa%20falando%20sobre%20o%20seu%20objetivo?%20Escolha%20uma%20das%20op%C3%A7%C3%B5es%20abaixo%20para%20que%20eu%20possa%20te%20apresentar%20as%20melhores%20oportunidades%20de%20cons%C3%B3rcio:%0A%0AIm%C3%B3vel%0A%0AAutom%C3%B3vel%0A%0AMoto%0A%0AInvestimento%0A%0AVe%C3%ADculos%20Pesados%0A%0AAqui%20voc%C3%AA%20ser%C3%A1%20atendido(a)%20por%20um%20especialista%20desde%20o%20in%C3%ADcio.%0A%0A*Aproveite%20a%20campanha%20do%20Cons%C3%B3rcio%20Porto%20de%20Agosto!*', '_blank');
+    window.open('https://wa.me/5531996925313?text=Olá%2C%20tenho%20interesse%20em%20simular%20um%20consórcio%20de%20veículo.%20Pode%20me%20ajudar%3F', '_blank');
   };
   const handleSimulationSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
