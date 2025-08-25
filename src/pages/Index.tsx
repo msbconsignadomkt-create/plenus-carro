@@ -7,9 +7,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Car, CreditCard, Shield, Users, Calculator, CheckCircle, Star, Phone, Mail, ChevronRight, X } from "lucide-react";
 import heroCarImage from "@/assets/hero-car.jpg";
 const Index = () => {
-  const handleWhatsAppContact = (message: string) => {
-    const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/5511999999999?text=${encodedMessage}`, '_blank');
+  const handleWhatsAppContact = () => {
+    window.open('https://wa.me/5531996925313?text=Oi!%20%C3%89%20um%20prazer%20ter%20voc%C3%AA%20na%20Plenus.%0A%0AQue%20tal%20come%C3%A7armos%20nossa%20conversa%20falando%20sobre%20o%20seu%20objetivo?%20Escolha%20uma%20das%20op%C3%A7%C3%B5es%20abaixo%20para%20que%20eu%20possa%20te%20apresentar%20as%20melhores%20oportunidades%20de%20cons%C3%B3rcio:%0A%0AIm%C3%B3vel%0A%0AAutom%C3%B3vel%0A%0AMoto%0A%0AInvestimento%0A%0AVe%C3%ADculos%20Pesados%0A%0AAqui%20voc%C3%AA%20ser%C3%A1%20atendido(a)%20por%20um%20especialista%20desde%20o%20in%C3%ADcio.%0A%0A*Aproveite%20a%20campanha%20do%20Cons%C3%B3rcio%20Porto%20de%20Agosto!*', '_blank');
   };
   const handleSimulationSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -18,10 +17,7 @@ const Index = () => {
     const phone = formData.get('phone');
     const vehicle = formData.get('vehicle');
     const value = formData.get('value');
-    const message = `Olá! Gostaria de simular um consórcio para ${vehicle}. 
-Meus dados: ${name}, ${phone}. 
-Valor estimado: R$ ${value}.`;
-    handleWhatsAppContact(message);
+    handleWhatsAppContact();
   };
   return <div className="min-h-screen bg-background">
       {/* Header */}
@@ -30,7 +26,7 @@ Valor estimado: R$ ${value}.`;
           <div className="flex items-center gap-2">
             <img src="/lovable-uploads/c5604e87-e4d6-41ab-b1a7-9b2e28dd53e2.png" alt="Plenus Seguros" className="h-10 w-auto" />
           </div>
-          <Button variant="secondary" size="sm" onClick={() => handleWhatsAppContact("Olá! Gostaria de conhecer mais sobre os consórcios da Plenus.")}>
+          <Button variant="secondary" size="sm" onClick={handleWhatsAppContact}>
             <Phone className="h-4 w-4 mr-2" />
             Contato
           </Button>
@@ -59,7 +55,7 @@ Valor estimado: R$ ${value}.`;
                   Simule Agora
                   <Calculator className="ml-2 h-5 w-5" />
                 </Button>
-                <Button variant="outline" size="lg" onClick={() => handleWhatsAppContact("Olá! Gostaria de falar com um especialista sobre consórcios.")} className="text-lg px-8 py-6 border-primary-foreground/20 hover:bg-primary-foreground text-slate-950">
+                <Button variant="outline" size="lg" onClick={handleWhatsAppContact} className="text-lg px-8 py-6 border-primary-foreground/20 hover:bg-primary-foreground text-slate-950">
                   Falar com Especialista
                   <ChevronRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -312,7 +308,7 @@ Valor estimado: R$ ${value}.`;
                   <p className="text-muted-foreground mb-4">
                     Mais de 10 anos ajudando pessoas a realizarem o sonho do carro próprio através do consórcio.
                   </p>
-                  <Button variant="outline" onClick={() => handleWhatsAppContact("Olá Hugo! Gostaria de conversar sobre consórcios.")} className="w-full">
+                  <Button variant="outline" onClick={handleWhatsAppContact} className="w-full">
                     <Phone className="h-4 w-4 mr-2" />
                     Falar com Hugo
                   </Button>
