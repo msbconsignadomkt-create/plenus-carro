@@ -304,9 +304,8 @@ const Index = () => {
               <img src="/lovable-uploads/38b25d33-557d-4466-871e-577411d2ce35.png" alt="Hugo - Especialista Plenus Seguros" className="w-80 h-auto mx-auto rounded-2xl shadow-elegant" />
               <Card className="mt-6 shadow-card">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold text-primary mb-2">Hugo - CEO Plenus Seguros
-
-                </h3>
+                  <h3 className="font-semibold text-primary mb-2">Hugo Morais - CEO Plenus
+Administrador com uma sólida trajetória, este profissional iniciou sua carreira em 2008 focado no atendimento a empresas, em uma das maiores instituições financeiras do país. Em 2015, expandiu sua atuação para o mercado de investimentos, onde passou a atuar tanto com pessoas físicas quanto empresas na maior distribuidora de investimentos do Brasil. Sua experiência abrange uma década e meia de atuação no mercado financeiro, com um olhar completo sobre as necessidades de diferentes perfis de clientes.</h3>
                   
                   <Button variant="outline" onClick={handleWhatsAppContact} className="w-full">
                     <Phone className="h-4 w-4 mr-2" />
