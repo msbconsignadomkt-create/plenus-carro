@@ -304,10 +304,10 @@ const Index = () => {
               <img src="/lovable-uploads/38b25d33-557d-4466-871e-577411d2ce35.png" alt="Hugo - Especialista Plenus Seguros" className="w-80 h-auto mx-auto rounded-2xl shadow-elegant" />
               <Card className="mt-6 shadow-card">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold text-primary mb-2">Hugo - CEO Plenus Seguros</h3>
-                  <p className="text-muted-foreground mb-4">
-                    Mais de 10 anos ajudando pessoas a realizarem o sonho do carro próprio através do consórcio.
-                  </p>
+                  <h3 className="font-semibold text-primary mb-2">Hugo - CEO Plenus Seguros
+
+                </h3>
+                  
                   <Button variant="outline" onClick={handleWhatsAppContact} className="w-full">
                     <Phone className="h-4 w-4 mr-2" />
                     Falar com Hugo
