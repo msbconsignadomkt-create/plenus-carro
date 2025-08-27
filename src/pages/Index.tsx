@@ -13,14 +13,31 @@ const Index = () => {
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
   };
+
+  const handleWhatsAppContactWithData = (formData: {name: string, phone: string, vehicle: string, value: string}) => {
+    const message = `Olá, meu nome é ${formData.name} e gostaria de simular um consórcio com os seguintes dados:
+
+📱 Telefone: ${formData.phone || 'Não informado'}
+🚗 Tipo de veículo: ${formData.vehicle || 'Não informado'}
+💰 Valor desejado: R$ ${formData.value || 'Não informado'}
+
+Pode me ajudar com a simulação?`;
+    
+    const phone = "5531996925313";
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  };
+
   const handleSimulationSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.target as HTMLFormElement);
-    const name = formData.get('name');
-    const phone = formData.get('phone');
-    const vehicle = formData.get('vehicle');
-    const value = formData.get('value');
-    handleWhatsAppContact();
+    const simulationData = {
+      name: formData.get('name') as string,
+      phone: formData.get('phone') as string,
+      vehicle: formData.get('vehicle') as string,
+      value: formData.get('value') as string,
+    };
+    handleWhatsAppContactWithData(simulationData);
   };
   return <div className="min-h-screen bg-background">
       {/* Header */}
