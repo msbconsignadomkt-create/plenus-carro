@@ -8,7 +8,7 @@ import { Car, CreditCard, Shield, Users, Calculator, CheckCircle, Star, Phone, M
 import heroCarImage from "@/assets/hero-car.jpg";
 const Index = () => {
   const handleWhatsAppContact = () => {
-    window.open('https://wa.me/5531996925313?text=Olá%2C%20tenho%20interesse%20em%20simular%20um%20consórcio%20de%20veículo.%20Pode%20me%20ajudar%3F', '_blank');
+    window.open('https://api.whatsapp.com/send?phone=5531996925313&text=Ol%C3%A1%2C+tenho+interesse+em+simular+um+cons%C3%B3rcio+de+carro%2Fmoto.+Pode+me+ajudar%3F', '_blank');
   };
   const handleSimulationSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -433,6 +433,17 @@ Administrador com uma sólida trajetória, este profissional iniciou sua carreir
           </div>
         </div>
       </section>
+
+      {/* WhatsApp Floating Button */}
+      <div className="fixed bottom-6 right-6 z-50">
+        <Button
+          onClick={handleWhatsAppContact}
+          size="lg"
+          className="rounded-full w-16 h-16 bg-green-500 hover:bg-green-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 animate-pulse"
+        >
+          <Phone className="h-8 w-8" />
+        </Button>
+      </div>
 
       {/* Footer */}
       <footer className="py-12 bg-primary text-primary-foreground">
