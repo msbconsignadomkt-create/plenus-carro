@@ -8,7 +8,10 @@ import { Car, CreditCard, Shield, Users, Calculator, CheckCircle, Star, Phone, M
 import heroCarImage from "@/assets/hero-car.jpg";
 const Index = () => {
   const handleWhatsAppContact = () => {
-    window.open('https://api.whatsapp.com/send?phone=5531996925313&text=Ol%C3%A1%2C+tenho+interesse+em+simular+um+cons%C3%B3rcio+de+carro%2Fmoto.+Pode+me+ajudar%3F', '_blank');
+    const message = "Olá, tenho interesse em simular um consórcio de carro/moto. Pode me ajudar?";
+    const phone = "5531996925313";
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
   };
   const handleSimulationSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
