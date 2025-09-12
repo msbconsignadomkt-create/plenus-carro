@@ -5,7 +5,7 @@ import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Car, CreditCard, Shield, Users, Calculator, CheckCircle, Star, Phone, Mail, ChevronRight, X } from "lucide-react";
-import heroCarImage from "@/assets/hero-car.jpg";
+import heroCarImage from "@/assets/hero-cars.png";
 const Index = () => {
   // GTM Tracking helper function
   const gtmPush = (eventName: string, eventData: any = {}) => {
