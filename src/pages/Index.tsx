@@ -7,14 +7,64 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Car, CreditCard, Shield, Users, Calculator, CheckCircle, Star, Phone, Mail, ChevronRight, X } from "lucide-react";
 import heroCarImage from "@/assets/hero-car.jpg";
 const Index = () => {
-  const handleWhatsAppContact = () => {
+  // GTM Tracking helper function
+  const gtmPush = (eventName: string, eventData: any = {}) => {
+    if (typeof window !== 'undefined' && (window as any).dataLayer) {
+      (window as any).dataLayer.push({
+        event: eventName,
+        ...eventData
+      });
+    }
+  };
+
+  const handleWhatsAppContact = (source: string = 'generic') => {
+    // GTM Event
+    gtmPush('contact_whatsapp', {
+      event_category: 'engagement',
+      event_label: source,
+      value: 1
+    });
+
     const message = "Olá, tenho interesse em simular um consórcio de carro/moto. Pode me ajudar?";
     const phone = "5531996925313";
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
   };
 
+  const handleSpecialistContact = () => {
+    // GTM Event
+    gtmPush('contact_specialist', {
+      event_category: 'engagement',
+      event_label: 'hero_section',
+      value: 1
+    });
+
+    handleWhatsAppContact('specialist');
+  };
+
+  const handleSimulateClick = () => {
+    // GTM Event
+    gtmPush('lead_form_start', {
+      event_category: 'conversion',
+      event_label: 'simulate_now',
+      value: 1
+    });
+
+    document.getElementById('simulacao')?.scrollIntoView({
+      behavior: 'smooth'
+    });
+  };
+
   const handleWhatsAppContactWithData = (formData: {name: string, phone: string, vehicle: string, value: string}) => {
+    // GTM Event for lead generation
+    gtmPush('generate_lead', {
+      event_category: 'conversion',
+      event_label: 'simulation_form',
+      lead_value: formData.value || 'not_specified',
+      vehicle_type: formData.vehicle || 'not_specified',
+      value: 5
+    });
+
     const message = `Olá, meu nome é ${formData.name} e gostaria de simular um consórcio com os seguintes dados:
 
 📱 Telefone: ${formData.phone || 'Não informado'}
@@ -27,6 +77,11 @@ Pode me ajudar com a simulação?`;
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
   };
+
+  // Click handlers with GTM tracking
+  const handleHeaderContactClick = () => handleWhatsAppContact('header');
+  const handleHugoContactClick = () => handleWhatsAppContact('hugo_profile');
+  const handleFloatingContactClick = () => handleWhatsAppContact('floating_button');
 
   const handleSimulationSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -46,7 +101,7 @@ Pode me ajudar com a simulação?`;
           <div className="flex items-center gap-2">
             <img src="/lovable-uploads/c5604e87-e4d6-41ab-b1a7-9b2e28dd53e2.png" alt="Plenus Seguros" className="h-10 w-auto" />
           </div>
-          <Button variant="secondary" size="sm" onClick={handleWhatsAppContact}>
+          <Button variant="secondary" size="sm" onClick={handleHeaderContactClick}>
             <Phone className="h-4 w-4 mr-2" />
             Contato
           </Button>
@@ -69,13 +124,11 @@ Pode me ajudar com a simulação?`;
                 Consórcio sem juros, sem entrada obrigatória e com parcelas que cabem no seu bolso. Simule agora!
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button variant="secondary" size="lg" onClick={() => document.getElementById('simulacao')?.scrollIntoView({
-                behavior: 'smooth'
-              })} className="text-lg px-8 py-6">
+                <Button variant="secondary" size="lg" onClick={handleSimulateClick} className="text-lg px-8 py-6">
                   Simule Agora
                   <Calculator className="ml-2 h-5 w-5" />
                 </Button>
-                <Button variant="outline" size="lg" onClick={handleWhatsAppContact} className="text-lg px-8 py-6 border-primary-foreground/20 hover:bg-primary-foreground text-slate-950">
+                <Button variant="outline" size="lg" onClick={handleSpecialistContact} className="text-lg px-8 py-6 border-primary-foreground/20 hover:bg-primary-foreground text-slate-950">
                   Falar com Especialista
                   <ChevronRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -327,7 +380,7 @@ Pode me ajudar com a simulação?`;
                   <h3 className="font-semibold text-primary mb-2">Hugo Morais - CEO Plenus
 Administrador com uma sólida trajetória, este profissional iniciou sua carreira em 2008 focado no atendimento a empresas, em uma das maiores instituições financeiras do país. Em 2015, expandiu sua atuação para o mercado de investimentos, onde passou a atuar tanto com pessoas físicas quanto empresas na maior distribuidora de investimentos do Brasil. Sua experiência abrange uma década e meia de atuação no mercado financeiro, com um olhar completo sobre as necessidades de diferentes perfis de clientes.</h3>
                   
-                  <Button variant="outline" onClick={handleWhatsAppContact} className="w-full">
+                  <Button variant="outline" onClick={handleHugoContactClick} className="w-full">
                     <Phone className="h-4 w-4 mr-2" />
                     Falar com Hugo
                   </Button>
@@ -456,7 +509,7 @@ Administrador com uma sólida trajetória, este profissional iniciou sua carreir
 
       {/* WhatsApp Floating Button */}
       <div className="fixed bottom-6 right-6 z-50">
-        <Button onClick={handleWhatsAppContact} size="lg" className="rounded-full w-16 h-16 bg-green-500 hover:bg-green-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 animate-pulse">
+        <Button onClick={handleFloatingContactClick} size="lg" className="rounded-full w-16 h-16 bg-green-500 hover:bg-green-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 animate-pulse">
           <Phone className="h-8 w-8" />
         </Button>
       </div>
