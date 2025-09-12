@@ -17,7 +17,6 @@ const Index = () => {
       });
     }
   };
-
   const handleWhatsAppContact = (source: string = 'generic') => {
     // GTM Event
     gtmPush('contact_whatsapp', {
@@ -25,13 +24,11 @@ const Index = () => {
       event_label: source,
       value: 1
     });
-
     const message = "Olá, tenho interesse em simular um consórcio de carro/moto. Pode me ajudar?";
     const phone = "5531996925313";
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
   };
-
   const handleSpecialistContact = () => {
     // GTM Event
     gtmPush('contact_specialist', {
@@ -39,10 +36,8 @@ const Index = () => {
       event_label: 'hero_section',
       value: 1
     });
-
     handleWhatsAppContact('specialist');
   };
-
   const handleSimulateClick = () => {
     // GTM Event
     gtmPush('lead_form_start', {
@@ -50,13 +45,16 @@ const Index = () => {
       event_label: 'simulate_now',
       value: 1
     });
-
     document.getElementById('simulacao')?.scrollIntoView({
       behavior: 'smooth'
     });
   };
-
-  const handleWhatsAppContactWithData = (formData: {name: string, phone: string, vehicle: string, value: string}) => {
+  const handleWhatsAppContactWithData = (formData: {
+    name: string;
+    phone: string;
+    vehicle: string;
+    value: string;
+  }) => {
     // GTM Event for lead generation
     gtmPush('generate_lead', {
       event_category: 'conversion',
@@ -65,7 +63,6 @@ const Index = () => {
       vehicle_type: formData.vehicle || 'not_specified',
       value: 5
     });
-
     const message = `Olá, meu nome é ${formData.name} e gostaria de simular um consórcio com os seguintes dados:
 
 📱 Telefone: ${formData.phone || 'Não informado'}
@@ -73,7 +70,6 @@ const Index = () => {
 💰 Valor desejado: R$ ${formData.value || 'Não informado'}
 
 Pode me ajudar com a simulação?`;
-    
     const phone = "5531996925313";
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
@@ -83,7 +79,6 @@ Pode me ajudar com a simulação?`;
   const handleHeaderContactClick = () => handleWhatsAppContact('header');
   const handleHugoContactClick = () => handleWhatsAppContact('hugo_profile');
   const handleFloatingContactClick = () => handleWhatsAppContact('floating_button');
-
   const handleSimulationSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.target as HTMLFormElement);
@@ -91,7 +86,7 @@ Pode me ajudar com a simulação?`;
       name: formData.get('name') as string,
       phone: formData.get('phone') as string,
       vehicle: formData.get('vehicle') as string,
-      value: formData.get('value') as string,
+      value: formData.get('value') as string
     };
     handleWhatsAppContactWithData(simulationData);
   };
@@ -393,34 +388,7 @@ Administrador com uma sólida trajetória, este profissional iniciou sua carreir
       </section>
 
       {/* Empresas Parceiras */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
-              Principais Administradoras do Brasil
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              Trabalhamos com as maiores e mais confiáveis empresas de consórcio do país
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-card rounded-lg p-8 shadow-card border">
-              <img 
-                src={consortiumCompaniesLogo} 
-                alt="Logos das principais empresas de consórcio: Rodobens, Embracon, Servopa, União e Itaú" 
-                className="w-full h-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
-                loading="lazy"
-              />
-            </div>
-            <div className="text-center mt-6">
-              <p className="text-sm text-muted-foreground">
-                Empresas regulamentadas pelo Banco Central e com tradição no mercado brasileiro
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* FAQ */}
       <section className="py-16 bg-plenus-gray">
