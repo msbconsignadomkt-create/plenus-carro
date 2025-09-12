@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Car, CreditCard, Shield, Users, Calculator, CheckCircle, Star, Phone, Mail, ChevronRight, X } from "lucide-react";
 import heroCarImage from "@/assets/hero-cars.png";
+import consortiumCompaniesLogo from "@/assets/logos/consortium-companies.png";
 const Index = () => {
   // GTM Tracking helper function
   const gtmPush = (eventName: string, eventData: any = {}) => {
@@ -386,6 +387,36 @@ Administrador com uma sólida trajetória, este profissional iniciou sua carreir
                   </Button>
                 </CardContent>
               </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Empresas Parceiras */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
+              Principais Administradoras do Brasil
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Trabalhamos com as maiores e mais confiáveis empresas de consórcio do país
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-card rounded-lg p-8 shadow-card border">
+              <img 
+                src={consortiumCompaniesLogo} 
+                alt="Logos das principais empresas de consórcio: Rodobens, Embracon, Servopa, União e Itaú" 
+                className="w-full h-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                loading="lazy"
+              />
+            </div>
+            <div className="text-center mt-6">
+              <p className="text-sm text-muted-foreground">
+                Empresas regulamentadas pelo Banco Central e com tradição no mercado brasileiro
+              </p>
             </div>
           </div>
         </div>
