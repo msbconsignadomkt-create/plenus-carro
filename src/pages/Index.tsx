@@ -303,85 +303,47 @@ Pode me ajudar com a simulação?`;
         </div>
       </section>
 
-      {/* Autoridade e Prova Social */}
+      {/* Sobre a Plenus Seguros */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <Badge variant="secondary" className="mb-4 bg-plenus-orange/10 text-plenus-orange border-plenus-orange/20">
-                Mais de 10 anos de experiência
-              </Badge>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
-                Autoridade e experiência que você pode confiar
-              </h2>
-              
-              <div className="grid grid-cols-2 gap-6 mb-8">
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-plenus-orange mb-2">10+</div>
-                  <p className="text-muted-foreground">Anos de experiência</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-plenus-orange mb-2">1000+</div>
-                  <p className="text-muted-foreground">Clientes satisfeitos</p>
-                </div>
-              </div>
-
-              <div className="space-y-4">
-                <Card className="border-l-4 border-l-plenus-orange shadow-card">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="flex text-plenus-orange">
-                        <Star className="h-5 w-5 fill-current" />
-                        <Star className="h-5 w-5 fill-current" />
-                        <Star className="h-5 w-5 fill-current" />
-                        <Star className="h-5 w-5 fill-current" />
-                        <Star className="h-5 w-5 fill-current" />
-                      </div>
-                      <div>
-                        <p className="text-muted-foreground mb-2">
-                          "Excelente atendimento! Consegui meu carro sem juros e sem entrada. Hugo foi fundamental no processo."
-                        </p>
-                        <p className="font-semibold text-primary">— Maria Silva, São Paulo</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-l-4 border-l-plenus-orange shadow-card">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="flex text-plenus-orange">
-                        <Star className="h-5 w-5 fill-current" />
-                        <Star className="h-5 w-5 fill-current" />
-                        <Star className="h-5 w-5 fill-current" />
-                        <Star className="h-5 w-5 fill-current" />
-                        <Star className="h-5 w-5 fill-current" />
-                      </div>
-                      <div>
-                        <p className="text-muted-foreground mb-2">
-                          "Transparência total e processo super simples. Recomendo a todos que querem um consórcio sério."
-                        </p>
-                        <p className="font-semibold text-primary">— João Santos, Rio de Janeiro</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
+          <div className="max-w-4xl mx-auto text-center">
+            <Badge variant="secondary" className="mb-6 bg-plenus-orange/10 text-plenus-orange border-plenus-orange/20">
+              Mais de 10 anos de experiência
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-primary">
+              Sobre a Plenus Seguros
+            </h2>
+            
+            <div className="bg-card p-8 rounded-2xl shadow-elegant mb-8">
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                A Plenus Seguros possui profissionais com mais de 10 anos de experiência no mercado, sendo especialista em oferecer diversas modalidades de seguros, consórcios e benefícios para pessoas físicas e empresas. Conseguimos isso por meio de um processo diferenciado e qualificado de seus profissionais e também pela sólida parceria com as melhores seguradoras e administradoras de consórcio do mercado. A empresa está capacitada e vem identificando quais são os produtos que melhor atendem as necessidades e expectativas de seus clientes.
+              </p>
             </div>
 
-            <div className="text-center">
-              <img src="/lovable-uploads/38b25d33-557d-4466-871e-577411d2ce35.png" alt="Hugo - Especialista Plenus Seguros" className="w-80 h-auto mx-auto rounded-2xl shadow-elegant" />
-              <Card className="mt-6 shadow-card">
-                <CardContent className="p-6">
-                  <h3 className="font-semibold text-primary mb-2">Hugo Morais - CEO Plenus
-Administrador com uma sólida trajetória, este profissional iniciou sua carreira em 2008 focado no atendimento a empresas, em uma das maiores instituições financeiras do país. Em 2015, expandiu sua atuação para o mercado de investimentos, onde passou a atuar tanto com pessoas físicas quanto empresas na maior distribuidora de investimentos do Brasil. Sua experiência abrange uma década e meia de atuação no mercado financeiro, com um olhar completo sobre as necessidades de diferentes perfis de clientes.</h3>
-                  
-                  <Button variant="outline" onClick={handleHugoContactClick} className="w-full">
-                    <Phone className="h-4 w-4 mr-2" />
-                    Falar com Hugo
-                  </Button>
-                </CardContent>
-              </Card>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-orange rounded-2xl flex items-center justify-center">
+                  <Users className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2 text-primary">Experiência</h3>
+                <p className="text-muted-foreground">Mais de 10 anos no mercado de seguros e consórcios</p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-orange rounded-2xl flex items-center justify-center">
+                  <Shield className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2 text-primary">Parcerias Sólidas</h3>
+                <p className="text-muted-foreground">Parceria com as melhores seguradoras do mercado</p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-orange rounded-2xl flex items-center justify-center">
+                  <CheckCircle className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2 text-primary">Atendimento Qualificado</h3>
+                <p className="text-muted-foreground">Profissionais capacitados e processo diferenciado</p>
+              </div>
             </div>
           </div>
         </div>
