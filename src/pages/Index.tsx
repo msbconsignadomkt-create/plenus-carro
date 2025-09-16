@@ -490,29 +490,6 @@ Pode me ajudar com a simulação?`;
                   ))}
                 </div>
                 <p className="text-muted-foreground mb-6 italic">
-                  "Realizei o sonho do meu primeiro carro através do consórcio da Plenus. O atendimento foi excepcional e as parcelas caberam perfeitamente no meu orçamento. Recomendo para todos!"
-                </p>
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gradient-orange rounded-full flex items-center justify-center text-white font-semibold mr-4">
-                    MC
-                  </div>
-                  <div>
-                    <p className="font-semibold text-primary">Mariana Costa</p>
-                    <p className="text-sm text-muted-foreground">São Paulo, SP</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Avaliação 2 */}
-            <Card className="shadow-elegant border-0 hover:shadow-2xl transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <p className="text-muted-foreground mb-6 italic">
                   "Processo super transparente e equipe muito profissional. Consegui minha contemplação e hoje dirijo meu carro zero! A Plenus fez toda a diferença no meu planejamento financeiro."
                 </p>
                 <div className="flex items-center">
@@ -527,7 +504,76 @@ Pode me ajudar com a simulação?`;
               </CardContent>
             </Card>
 
+            {/* Avaliação 2 */}
+            <Card className="shadow-elegant border-0 hover:shadow-2xl transition-all duration-300">
+              <CardContent className="p-8">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground mb-6 italic">
+                  "Realizei o sonho do meu primeiro carro através do consórcio da Plenus. O atendimento foi excepcional e as parcelas caberam perfeitamente no meu orçamento. Recomendo para todos!"
+                </p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-gradient-orange rounded-full flex items-center justify-center text-white font-semibold mr-4">
+                    MC
+                  </div>
+                  <div>
+                    <p className="font-semibold text-primary">Mariana Costa</p>
+                    <p className="text-sm text-muted-foreground">Uberlândia, MG</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
             {/* Avaliação 3 */}
+            <Card className="shadow-elegant border-0 hover:shadow-2xl transition-all duration-300">
+              <CardContent className="p-8">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground mb-6 italic">
+                  "Empresa séria e comprometida. Acompanharam todo o processo até a entrega das chaves. Minha família está muito feliz com nosso carro novo!"
+                </p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-gradient-orange rounded-full flex items-center justify-center text-white font-semibold mr-4">
+                    CF
+                  </div>
+                  <div>
+                    <p className="font-semibold text-primary">Carlos Ferreira</p>
+                    <p className="text-sm text-muted-foreground">Contagem, MG</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Avaliação 4 */}
+            <Card className="shadow-elegant border-0 hover:shadow-2xl transition-all duration-300">
+              <CardContent className="p-8">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground mb-6 italic">
+                  "Profissionais muito competentes e experientes. Me ajudaram a escolher o melhor plano e hoje tenho minha moto dos sonhos. Processo bem tranquilo!"
+                </p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-gradient-orange rounded-full flex items-center justify-center text-white font-semibold mr-4">
+                    LM
+                  </div>
+                  <div>
+                    <p className="font-semibold text-primary">Lucas Martins</p>
+                    <p className="text-sm text-muted-foreground">Juiz de Fora, MG</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Avaliação 5 */}
             <Card className="shadow-elegant border-0 hover:shadow-2xl transition-all duration-300">
               <CardContent className="p-8">
                 <div className="flex items-center mb-4">
@@ -550,30 +596,7 @@ Pode me ajudar com a simulação?`;
               </CardContent>
             </Card>
 
-            {/* Avaliação 4 */}
-            <Card className="shadow-elegant border-0 hover:shadow-2xl transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <p className="text-muted-foreground mb-6 italic">
-                  "Empresa séria e comprometida. Acompanharam todo o processo até a entrega das chaves. Minha família está muito feliz com nosso carro novo!"
-                </p>
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gradient-orange rounded-full flex items-center justify-center text-white font-semibold mr-4">
-                    CF
-                  </div>
-                  <div>
-                    <p className="font-semibold text-primary">Carlos Ferreira</p>
-                    <p className="text-sm text-muted-foreground">Campinas, SP</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Avaliação 5 */}
+            {/* Avaliação 6 */}
             <Card className="shadow-elegant border-0 hover:shadow-2xl transition-all duration-300">
               <CardContent className="p-8">
                 <div className="flex items-center mb-4">
@@ -590,30 +613,7 @@ Pode me ajudar com a simulação?`;
                   </div>
                   <div>
                     <p className="font-semibold text-primary">Juliana Santos</p>
-                    <p className="text-sm text-muted-foreground">Brasília, DF</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Avaliação 6 */}
-            <Card className="shadow-elegant border-0 hover:shadow-2xl transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <p className="text-muted-foreground mb-6 italic">
-                  "Profissionais muito competentes e experientes. Me ajudaram a escolher o melhor plano e hoje tenho minha moto dos sonhos. Processo bem tranquilo!"
-                </p>
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gradient-orange rounded-full flex items-center justify-center text-white font-semibold mr-4">
-                    LM
-                  </div>
-                  <div>
-                    <p className="font-semibold text-primary">Lucas Martins</p>
-                    <p className="text-sm text-muted-foreground">Salvador, BA</p>
+                    <p className="text-sm text-muted-foreground">São Paulo, SP</p>
                   </div>
                 </div>
               </CardContent>
