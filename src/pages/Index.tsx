@@ -137,6 +137,59 @@ Pode me ajudar com a simulação?`;
         </div>
       </section>
 
+      {/* Simulação */}
+      <section id="simulacao" className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
+              Simule seu consórcio
+            </h2>
+            <p className="text-xl text-muted-foreground mb-12">
+              Preencha os dados abaixo e receba sua simulação personalizada
+            </p>
+
+            <Card className="shadow-elegant">
+              <CardContent className="p-8">
+                <form onSubmit={handleSimulationSubmit} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <Label htmlFor="name">Nome completo</Label>
+                      <Input id="name" name="name" placeholder="Seu nome completo" required />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="phone">WhatsApp</Label>
+                      <Input id="phone" name="phone" type="tel" placeholder="(11) 99999-9999" required />
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <Label htmlFor="vehicle">Tipo de veículo</Label>
+                    <select id="vehicle" name="vehicle" className="w-full p-3 border border-input rounded-lg bg-background" required>
+                      <option value="">Selecione o tipo de veículo</option>
+                      <option value="Carro Popular">Carro Popular (até R$ 50.000)</option>
+                      <option value="Carro Médio">Carro Médio (R$ 50.000 - R$ 100.000)</option>
+                      <option value="Carro Premium">Carro Premium (acima de R$ 100.000)</option>
+                      <option value="Moto">Moto</option>
+                      <option value="SUV/Picape">SUV/Picape</option>
+                    </select>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <Label htmlFor="value">Valor estimado do veículo</Label>
+                    <Input id="value" name="value" placeholder="Ex: 80.000" required />
+                  </div>
+                  
+                  <Button type="submit" className="w-full" size="lg" variant="secondary">
+                    Receber Simulação no WhatsApp
+                    <Phone className="ml-2 h-5 w-5" />
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Diferenciais */}
       <section className="py-16 bg-plenus-gray">
         <div className="container mx-auto px-4">
@@ -411,59 +464,6 @@ Pode me ajudar com a simulação?`;
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
-          </div>
-        </div>
-      </section>
-
-      {/* Simulação */}
-      <section id="simulacao" className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
-              Simule seu consórcio
-            </h2>
-            <p className="text-xl text-muted-foreground mb-12">
-              Preencha os dados abaixo e receba sua simulação personalizada
-            </p>
-
-            <Card className="shadow-elegant">
-              <CardContent className="p-8">
-                <form onSubmit={handleSimulationSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="name">Nome completo</Label>
-                      <Input id="name" name="name" placeholder="Seu nome completo" required />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="phone">WhatsApp</Label>
-                      <Input id="phone" name="phone" type="tel" placeholder="(11) 99999-9999" required />
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="vehicle">Tipo de veículo</Label>
-                    <select id="vehicle" name="vehicle" className="w-full p-3 border border-input rounded-lg bg-background" required>
-                      <option value="">Selecione o tipo de veículo</option>
-                      <option value="Carro Popular">Carro Popular (até R$ 50.000)</option>
-                      <option value="Carro Médio">Carro Médio (R$ 50.000 - R$ 100.000)</option>
-                      <option value="Carro Premium">Carro Premium (acima de R$ 100.000)</option>
-                      <option value="Moto">Moto</option>
-                      <option value="SUV/Picape">SUV/Picape</option>
-                    </select>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="value">Valor estimado do veículo</Label>
-                    <Input id="value" name="value" placeholder="Ex: 80.000" required />
-                  </div>
-                  
-                  <Button type="submit" className="w-full" size="lg" variant="secondary">
-                    Receber Simulação no WhatsApp
-                    <Phone className="ml-2 h-5 w-5" />
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
