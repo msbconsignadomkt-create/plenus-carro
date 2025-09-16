@@ -468,6 +468,167 @@ Pode me ajudar com a simulação?`;
         </div>
       </section>
 
+      {/* Avaliações de Clientes */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
+              O que nossos clientes dizem
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Histórias reais de quem realizou o sonho do carro próprio conosco
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Avaliação 1 */}
+            <Card className="shadow-elegant border-0 hover:shadow-2xl transition-all duration-300">
+              <CardContent className="p-8">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground mb-6 italic">
+                  "Realizei o sonho do meu primeiro carro através do consórcio da Plenus. O atendimento foi excepcional e as parcelas caberam perfeitamente no meu orçamento. Recomendo para todos!"
+                </p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-gradient-orange rounded-full flex items-center justify-center text-white font-semibold mr-4">
+                    MC
+                  </div>
+                  <div>
+                    <p className="font-semibold text-primary">Mariana Costa</p>
+                    <p className="text-sm text-muted-foreground">São Paulo, SP</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Avaliação 2 */}
+            <Card className="shadow-elegant border-0 hover:shadow-2xl transition-all duration-300">
+              <CardContent className="p-8">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground mb-6 italic">
+                  "Processo super transparente e equipe muito profissional. Consegui minha contemplação e hoje dirijo meu carro zero! A Plenus fez toda a diferença no meu planejamento financeiro."
+                </p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-gradient-orange rounded-full flex items-center justify-center text-white font-semibold mr-4">
+                    RS
+                  </div>
+                  <div>
+                    <p className="font-semibold text-primary">Roberto Silva</p>
+                    <p className="text-sm text-muted-foreground">Belo Horizonte, MG</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Avaliação 3 */}
+            <Card className="shadow-elegant border-0 hover:shadow-2xl transition-all duration-300">
+              <CardContent className="p-8">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground mb-6 italic">
+                  "Excelente atendimento! Me explicaram todo o processo com paciência e consegui o melhor plano para minha realidade. Hoje tenho meu SUV e não pago juros abusivos."
+                </p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-gradient-orange rounded-full flex items-center justify-center text-white font-semibold mr-4">
+                    AL
+                  </div>
+                  <div>
+                    <p className="font-semibold text-primary">Ana Luiza</p>
+                    <p className="text-sm text-muted-foreground">Rio de Janeiro, RJ</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Avaliação 4 */}
+            <Card className="shadow-elegant border-0 hover:shadow-2xl transition-all duration-300">
+              <CardContent className="p-8">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground mb-6 italic">
+                  "Empresa séria e comprometida. Acompanharam todo o processo até a entrega das chaves. Minha família está muito feliz com nosso carro novo!"
+                </p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-gradient-orange rounded-full flex items-center justify-center text-white font-semibold mr-4">
+                    CF
+                  </div>
+                  <div>
+                    <p className="font-semibold text-primary">Carlos Ferreira</p>
+                    <p className="text-sm text-muted-foreground">Campinas, SP</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Avaliação 5 */}
+            <Card className="shadow-elegant border-0 hover:shadow-2xl transition-all duration-300">
+              <CardContent className="p-8">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground mb-6 italic">
+                  "Simulei em várias empresas e a Plenus ofereceu as melhores condições. Atendimento personalizado e sem pressão para fechar negócio. Super indico!"
+                </p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-gradient-orange rounded-full flex items-center justify-center text-white font-semibold mr-4">
+                    JS
+                  </div>
+                  <div>
+                    <p className="font-semibold text-primary">Juliana Santos</p>
+                    <p className="text-sm text-muted-foreground">Brasília, DF</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Avaliação 6 */}
+            <Card className="shadow-elegant border-0 hover:shadow-2xl transition-all duration-300">
+              <CardContent className="p-8">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground mb-6 italic">
+                  "Profissionais muito competentes e experientes. Me ajudaram a escolher o melhor plano e hoje tenho minha moto dos sonhos. Processo bem tranquilo!"
+                </p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-gradient-orange rounded-full flex items-center justify-center text-white font-semibold mr-4">
+                    LM
+                  </div>
+                  <div>
+                    <p className="font-semibold text-primary">Lucas Martins</p>
+                    <p className="text-sm text-muted-foreground">Salvador, BA</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center mt-12">
+            <Button variant="secondary" size="lg" onClick={handleSpecialistContact} className="text-lg px-8 py-6">
+              Quero ser o próximo cliente satisfeito
+              <ChevronRight className="ml-2 h-5 w-5" />
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* WhatsApp Floating Button */}
       <div className="fixed bottom-6 right-6 z-50">
         <Button onClick={handleFloatingContactClick} size="lg" className="rounded-full w-16 h-16 bg-green-500 hover:bg-green-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 animate-pulse">
