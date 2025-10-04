@@ -7,6 +7,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Car, CreditCard, Shield, Users, Calculator, CheckCircle, Star, Phone, Mail, ChevronRight, X } from "lucide-react";
 import heroCarImage from "@/assets/hero-cars.png";
 import consortiumCompaniesLogo from "@/assets/logos/consortium-companies.png";
+import consortiumBrandsImage from "@/assets/consortium-brands.png";
 const Index = () => {
   // GTM Tracking helper function
   const gtmPush = (eventName: string, eventData: any = {}) => {
@@ -403,7 +404,35 @@ Pode me ajudar com a simulação?`;
       </section>
 
       {/* Empresas Parceiras */}
-      
+      <section className="py-16 bg-gradient-to-br from-primary/5 to-secondary/5">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
+              Marcas de Consórcio Representadas
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Trabalhamos com as principais administradoras de consórcio do mercado brasileiro
+            </p>
+          </div>
+          
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-card rounded-2xl shadow-elegant overflow-hidden">
+              <img 
+                src={consortiumBrandsImage} 
+                alt="Marcas de Consórcio: Rodobens, Bradesco, Itaú e Banco do Brasil" 
+                className="w-full h-auto"
+              />
+            </div>
+            
+            <div className="text-center mt-8">
+              <p className="text-muted-foreground text-lg">
+                Parcerias consolidadas para oferecer as melhores condições para você
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       {/* FAQ */}
       <section className="py-16 bg-plenus-gray">
