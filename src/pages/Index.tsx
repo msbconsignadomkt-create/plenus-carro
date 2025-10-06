@@ -105,8 +105,36 @@ Pode me ajudar com a simulação?`;
         </div>
       </header>
 
+      {/* Oferta por Tempo Limitado */}
+      <section className="pt-24 pb-0">
+        <div className="container mx-auto px-4">
+          <Card className="bg-gradient-orange border-0 shadow-elegant overflow-hidden">
+            <CardContent className="p-8 text-center">
+              <Badge variant="outline" className="mb-4 bg-white/20 text-white border-white/40 text-sm font-semibold">
+                🔥 OFERTA POR TEMPO LIMITADO
+              </Badge>
+              <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
+                Meia Parcela até a Contemplação
+              </h2>
+              <p className="text-xl text-white/90 mb-6 max-w-2xl mx-auto">
+                Pague apenas 50% do valor da parcela até ser contemplado. Uma condição exclusiva para você começar agora!
+              </p>
+              <Button 
+                variant="outline" 
+                size="lg" 
+                onClick={handleSimulateClick}
+                className="bg-white text-plenus-orange hover:bg-white/90 border-0 text-lg px-8 py-6 font-semibold"
+              >
+                Aproveitar Oferta Agora
+                <ChevronRight className="ml-2 h-5 w-5" />
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-hero">
+      <section className="pt-16 pb-16 bg-gradient-hero">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-left">
